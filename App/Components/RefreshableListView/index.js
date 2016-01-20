@@ -64,7 +64,10 @@ module.exports = React.createClass({
                                 paginationAllLoadedView={this.renderPaginationAllLoadedView}
                                 paginationWaitingView={this.renderPaginationWaitingView}
                                 headerView={this.renderHeaderView}
-                                refreshable={Platform.OS !== 'android'}
+                                PullToRefreshViewAndroidProps={{
+                                    colors: ['#F6F6EF'],
+                                    progressBackgroundColor: '#FF6600',
+                                }}
                                 customStyles={{
                                                 refreshableView: {
                                                     backgroundColor: this.state.backgroundColor,
